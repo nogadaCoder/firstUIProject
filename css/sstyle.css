@@ -1,0 +1,307 @@
+body{
+    background-color: darkolivegreen;
+    /* 그라데이션 안됨 */
+
+header{
+    width: 30%;
+    height: 100%;
+
+    background: linear-gradient(45deg, red,blue);
+
+    position: fixed;
+    top:0px;
+    left:0px;
+}
+
+main{
+    box-sizing: border-box;
+
+    margin-left: 30%;
+    padding: 20px
+
+}
+
+header h1{
+    font-size: 270%;
+    /* 기본 16px의 2.7배 */
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing:1px;
+    line-height: 1;
+
+    color:rgb(0, 0, 0);
+
+    position: absolute;
+    top: 50%;
+    left:10%;
+/* h1 사이즈를 줄이지는 못했다 */
+    transform: translateY(-150px) translateX(25px);
+
+}
+
+
+header h1::before{
+    content: 'UI/UX Development';
+    display: block;
+
+    font-size: 14px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1;
+
+    position: absolute;
+    top: 85px;
+    left: 1%;
+
+    opacity: .9;
+}
+
+header h1::after{
+    content:'';
+    /* 크기가 줄었을때 그만 줄여라고 글을 바꾸고 싶다 */
+    display: block;
+
+    width: 100%;
+    /* 노란 실선이 h1태그(seo)를 따라간다는 거슬 아랐습니다 */
+    height: 3px;
+    margin-top: 20px;
+
+    background-color: yellow;
+}
+
+header ul{
+    position: absolute;
+    left: 70px;
+    bottom: 100px;
+    }
+    header ul li{
+        margin-right: 10px;
+
+        float: left;
+
+    }
+    header ul li a {
+        font-size: 18px;
+        color: rgb(0, 213, 255);
+        /* 브랜드 로고 */
+    }
+
+    header ul li a span{
+        display: inline-block;
+
+        font-weight: bold;
+        opacity: .7;
+
+        transform: scale(.7) translateX(-8px)
+    }
+
+    main section{
+        width:100%;
+    }
+
+    main section::after{
+        content:'';
+        display: block;
+        clear:both;
+    }
+
+    main section article{
+        box-sizing: border-box;
+
+        width:20%;
+        padding: 12px;
+
+        float: left;
+
+    }
+
+    main section article div{
+        box-sizing: border-box;
+
+        width: 100%;
+        height: 100%;
+        padding: 14px;
+        border-radius: 4px;
+    
+        background-color: rgb(61, 70, 78);
+        box-shadow: 5px 5px 20px rgba(3,196,255, 0.2);
+
+        cursor: pointer;
+
+    }
+
+    main section article div img{
+        width: 100%;
+    }
+
+    main section article div h2{
+        margin-top: 15px;
+        margin-bottom:5px;
+
+        color: gray;
+
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Orbitron', sans-serif;
+        letter-spacing: 1px;
+        line-height: 1;
+    }
+
+    main section article div p{
+        margin-bottom:15px;
+
+        color:rgb(255, 29, 29);
+
+        font-size: 16px;
+        font-family: Arial;
+        line-height: 1.2;
+    }
+
+    @media screen and (max-width: 1599px){
+        header{
+            width: 20%;
+        }
+        main{
+            margin-left: 30%
+        }
+        main section article{
+            width:30%;
+
+        }
+    }
+    @media screen and (max-width:1190px){
+        header{
+            width:100%;
+            height: 80px;
+
+            background: linear-gradient(0deg, pink, blue);
+            position: relative;
+    
+        }
+        header h1{
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            line-height: 1;
+
+            color: rgb(255, 255, 255);
+
+            transform:none;
+        }
+        header h1::before, header h1::after{
+            display: none;
+        }
+        header ul{
+            left:auto;
+
+            right: 20px;
+            bottom: 25px;
+        }
+        header ul li{
+            font-size: 20px;
+        
+        }
+        header ul li a{
+            font-size:20px;
+        }
+        header ul li a span{
+            display:none;
+        }
+
+        main{
+            width:100%;
+            margin-left:0px;
+        
+        }
+        main section article{
+            width:25%
+        }
+    }
+    @media screen and (max-width:899px){
+        header ul{
+            left:auto;
+            right:20px;
+        }
+        main section article{
+            width: 33.333%;
+        }
+    }
+    @media screen and (max-width:679px){
+        header ul{
+            left:auto;
+            right:20px;
+        
+        }
+       main section article{
+        width:50%;
+       } 
+    }
+    @media screen and (max-width:539px) {
+        header ul{
+            display:none;
+        }
+        main section article{
+            width:100%;
+        }
+    }
+        
+    main ul{
+        width:100%;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+    main ul::after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+    main ul li{
+        float:right;
+
+        width:100px;
+        height:26px;
+        margin-right:20px;
+    }
+    main ul li a {
+        display: block;
+
+        width:100%;
+        height:100%;
+        border-radius: 5px;
+
+        font-size:10px;
+        font-weight: bold;
+        font-family:'Orbitron', sans-serif;
+        letter-spacing: 1px;
+        line-height: 26px;
+
+        text-align: center;
+
+        color:chocolate;
+        background-color: rgb(213, 206, 255);
+
+        box-shadow: 0px 0px 10px rgb(6,254,345);
+    
+    }
+    main ul li.on a{
+        color: rgb(252, 0, 0);
+        background: radial-gradient(#e333,#345e22);
+        box-shadow: 0px 5px 20px rgba(0, 255, 255, 527);
+    }
+
+@media screen and (max-width: 539px){
+    main ul{
+        box-sizing: border-box;
+
+        margin-right: 0px;
+        padding:0px 13px;
+    }
+    main ul li{
+        width:32%;
+        margin-right:2%;
+    
+    }
+    main ul li:nth-of-type(1){
+        margin-right:0%;
+    }
+}
